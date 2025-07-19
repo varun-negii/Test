@@ -1,129 +1,205 @@
-Q1. What are the diffrent data types in Java Script?
+### Q1. What are the different data types in JavaScript?
 
-Ans There are two types of data types 
-i> Primitive 
-ii> Non-Primitive
+There are two types:
 
-Primitive example - Boolean Bigint String Numbers Null Undefine Symbole
-Non-Primitive - Object Array Functions
+1. **Primitive Types** –
+   Examples: `Boolean`, `BigInt`, `String`, `Number`, `Null`, `Undefined`, `Symbol`
 
-Q2. What is hoisting in Java Script?
+2. **Non-Primitive Types** –
+   Examples: `Object`, `Array`, `Function`
 
-Ans before compilation 
+---
 
-Q3. Differnce between var, let, and const?
+### Q2. What is Hoisting in JavaScript?
 
-Ans var is the globle scope we can change there value later and var is the Es5 feature
+Hoisting means moving **declarations** (like `var`, `function`) to the **top of their scope** before code runs.
 
-let is not the globle scope it diclared block scope and let is the Es6 feature
+---
 
-const is constant we can't change there value and also we can't assign there value later
+### Q3. Difference between `var`, `let`, and `const`?
 
-Q4. What is a closure? Can you give an example
+* `var`: Function-scoped, can be changed, available before declaration due to hoisting (ES5).
+* `let`: Block-scoped, can be changed (ES6).
+* `const`: Block-scoped, **cannot be changed** once assigned (ES6).
 
-Ans 
+---
 
-Q5. Differnce between == and ===?
+### Q4. What is a Closure?
 
-Ans == this is a equal to jise hm jise hm uski value check krte hai
+A closure is a function that **remembers variables from its outer function**, even after the outer function ends.
 
-=== is the aslo check the eqal to but this is a strict checking krta hai use types ko bhi
-main apko iske example ke sth smjhata hu
+---
 
-ex :
+### Q5. Difference between `==` and `===`?
 
-let age = '67'
+* `==`: Compares **value only** (type conversion).
+* `===`: Compares **value and type** (strict comparison).
 
-if (age == 67) {
-    console.log('yes');
-    
-} else {
-    console.log('no');
-    
-}  output is yes 
-but is the wrong ans kuki age hmne sting main no dala hai agr hm ye checking strict se krne to iska output no ayega 
+Example:
 
-ex === 
+```js
+'5' == 5   // true
+'5' === 5  // false
+```
 
-let age = '67'
+---
 
-if (age === 67) {
-    console.log('yes');
-    
-} else {
-    console.log('no');
-    
-}  output is no 
-kuki '67' is a String and 67 is a Numbers
+### Q6. What are Truthy and Falsy values?
 
+* **Truthy**: Values that act like `true`.
+  Examples: `"abc"`, `1`, `[]`, `{}`
+* **Falsy**: Values that act like `false`.
+  Examples: `0`, `""`, `null`, `undefined`, `NaN`, `false`
 
-Q6. what are truthy and falsy values in Java Script?
+---
 
-ex- truthy vale ex = 1 true and abc and falsy value is 0 false null 
+### Q7. Difference between `null` and `undefined`?
 
-Q7. What is the diffrent between null and Undefine?
+* `null`: Intentionally set to “nothing”
+* `undefined`: A variable has been declared but not assigned
 
-ans null is a falsy value and null mean is ntg and Undefine mean ki yha kuch to hai pr abhi wo define nhi hai 
-ex of null and Undefine
+---
 
-let name = null;
-console.log(name)//output null
+### Q8. What is Event Delegation?
 
-let name;
-console.log(name)//Undefine
+Event delegation is when a **parent element** handles events for its **child elements** using a single event listener.
 
-Q8 what is the event delegation?
+---
 
-ans 
+### Q9. What does the `this` keyword do?
 
-Q9 What is the use of this keyword?
+`this` refers to the **current object** or context where the code is running.
 
-ans this key word use hota hai function object main ki hme ye this iski btt kr rhe hai 
+---
 
-Q10 Arrow function ? and differnce from regular function
+### Q10. What is an Arrow Function? Difference from regular function?
 
-ans Arrow function Es6 function hai or iske differnce iska syntex hai jo nrml function se alg hai ()=>{} this is a arrow function syntex
+Arrow functions are a **shorter syntax** and **do not have their own `this`**.
 
-Q11 Synchronous and asynchronus 
+Example:
 
-ans Java Script is the Synchronous language jo ki line by line exicute hoti hai hai 
+```js
+const add = (a, b) => a + b;
+```
 
-asynchronus
-jese ki mne akpo btya js is a Synchronous language hai to js main code line by line exicute hota hai jise kafi problem ati hai jese ki hme kisi api se data lena hai to usme kuch time lgta hai or js Synchronous hone ki wjha se wo uska wait krti h to ye glt h iskliye hme jb bhi kisi cheez m time lgta h to hm use asynchronus main krte hai jise hmra code ruke na 
+---
 
-Q12 Event loop in js 
- 
-ans  event loop callstack 
+### Q11. Synchronous vs Asynchronous in JavaScript?
 
-Q13  Promises
+* **Synchronous**: Code runs step-by-step (blocking).
+* **Asynchronous**: Code can **pause and resume** later (non-blocking), like with API calls.
 
-ans Promises js ko asynchronus krne main help krta hai iske 3 methods hote hai resolve reject and panding in methods se hm apna data excute krte hai then catch se 
+---
 
-Q14 callback functions
+### Q12. What is the Event Loop?
 
-ans callback function refrance leta hai other functions ka
-Q15 map filter and foreach 
+The event loop allows JavaScript to **handle async tasks** by checking the **call stack** and **callback queue**.
 
-map -> map ek array ka methods hai jo hme help krta hau arry ki sari value ko use krne main jise arry orignal  value ko change na kre or map return a new array
+---
 
-filter -> filter hme conditon check kr ke data provide krta hai
+### Q13. What are Promises?
 
-foreach => is a loop jo hme arry ki sari value de deta hai pr wo return kuch nhi ktta 
+Promises handle **asynchronous operations**.
 
-Q16 SetTimeout and SetInterval
+States:
 
-SetTimeout => hme sirf ek baat value deta hai 
+* `pending`
+* `resolved`
+* `rejected`
 
-SetInterval => hme value baar deta hai apni timing ki hisb se jo hme set ki hai 
+Example:
 
-Q17 LocalStorage
+```js
+fetch(url)
+  .then(data => ...)
+  .catch(error => ...)
+```
 
-LocalStorage ki value browser main stroe ho jati hai wo tb tk delete nhi joti jb tk hm use particulary ja kr delete na kre
+---
 
-Q18 explain aysc await 
-ans
+### Q14. What is a Callback Function?
 
-Q19 hiher Order function
-ans accepts one or more functions as a arguments
+A function that is **passed into another function** to run later.
 
+---
 
+### Q15. Difference between `map`, `filter`, and `forEach`?
+
+* `map`: Transforms each item and **returns a new array**
+* `filter`: Returns a new array with **items that match a condition**
+* `forEach`: Runs code for each item, **no return**
+
+---
+
+### Q16. Difference between `setTimeout` and `setInterval`?
+
+* `setTimeout`: Runs code once after a delay
+* `setInterval`: Repeats code every few milliseconds
+
+---
+
+### Q17. What is LocalStorage?
+
+LocalStorage is a browser feature to **store key-value data** that stays until manually removed.
+
+---
+
+### Q18. What is `async/await`?
+
+`async/await` lets us **write async code like sync code** using Promises.
+
+Example:
+
+```js
+async function fetchData() {
+  let res = await fetch(url);
+  let data = await res.json();
+  console.log(data);
+}
+```
+
+---
+
+### Q19. What is a Higher Order Function?
+
+A function that **takes another function** as input or **returns a function**.
+
+---
+
+### Q20. What are `call`, `apply`, and `bind` methods?
+
+They are used to **control the value of `this`** in functions.
+
+#### `call()`
+
+Calls a function with a given `this` value and arguments one by one.
+
+```js
+function greet() {
+  console.log(this.name);
+}
+const person = { name: "Sparsh" };
+greet.call(person); // Output: Sparsh
+```
+
+#### `apply()`
+
+Same as `call()` but takes arguments as an **array**.
+
+```js
+function greet(msg) {
+  console.log(msg + " " + this.name);
+}
+greet.apply(person, ["Hello"]); // Output: Hello Sparsh
+```
+
+#### `bind()`
+
+Returns a **new function** with `this` bound to the given object.
+
+```js
+const greetPerson = greet.bind(person, "Hi");
+greetPerson(); // Output: Hi Sparsh
+```
+
+---
