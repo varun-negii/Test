@@ -1,0 +1,129 @@
+Q1. What are the diffrent data types in Java Script?
+
+Ans There are two types of data types 
+i> Primitive 
+ii> Non-Primitive
+
+Primitive example - Boolean Bigint String Numbers Null Undefine Symbole
+Non-Primitive - Object Array Functions
+
+Q2. What is hoisting in Java Script?
+
+Ans before compilation 
+
+Q3. Differnce between var, let, and const?
+
+Ans var is the globle scope we can change there value later and var is the Es5 feature
+
+let is not the globle scope it diclared block scope and let is the Es6 feature
+
+const is constant we can't change there value and also we can't assign there value later
+
+Q4. What is a closure? Can you give an example
+
+Ans 
+
+Q5. Differnce between == and ===?
+
+Ans == this is a equal to jise hm jise hm uski value check krte hai
+
+=== is the aslo check the eqal to but this is a strict checking krta hai use types ko bhi
+main apko iske example ke sth smjhata hu
+
+ex :
+
+let age = '67'
+
+if (age == 67) {
+    console.log('yes');
+    
+} else {
+    console.log('no');
+    
+}  output is yes 
+but is the wrong ans kuki age hmne sting main no dala hai agr hm ye checking strict se krne to iska output no ayega 
+
+ex === 
+
+let age = '67'
+
+if (age === 67) {
+    console.log('yes');
+    
+} else {
+    console.log('no');
+    
+}  output is no 
+kuki '67' is a String and 67 is a Numbers
+
+
+Q6. what are truthy and falsy values in Java Script?
+
+ex- truthy vale ex = 1 true and abc and falsy value is 0 false null 
+
+Q7. What is the diffrent between null and Undefine?
+
+ans null is a falsy value and null mean is ntg and Undefine mean ki yha kuch to hai pr abhi wo define nhi hai 
+ex of null and Undefine
+
+let name = null;
+console.log(name)//output null
+
+let name;
+console.log(name)//Undefine
+
+Q8 what is the event delegation?
+
+ans 
+
+Q9 What is the use of this keyword?
+
+ans this key word use hota hai function object main ki hme ye this iski btt kr rhe hai 
+
+Q10 Arrow function ? and differnce from regular function
+
+ans Arrow function Es6 function hai or iske differnce iska syntex hai jo nrml function se alg hai ()=>{} this is a arrow function syntex
+
+Q11 Synchronous and asynchronus 
+
+ans Java Script is the Synchronous language jo ki line by line exicute hoti hai hai 
+
+asynchronus
+jese ki mne akpo btya js is a Synchronous language hai to js main code line by line exicute hota hai jise kafi problem ati hai jese ki hme kisi api se data lena hai to usme kuch time lgta hai or js Synchronous hone ki wjha se wo uska wait krti h to ye glt h iskliye hme jb bhi kisi cheez m time lgta h to hm use asynchronus main krte hai jise hmra code ruke na 
+
+Q12 Event loop in js 
+ 
+ans  event loop callstack 
+
+Q13  Promises
+
+ans Promises js ko asynchronus krne main help krta hai iske 3 methods hote hai resolve reject and panding in methods se hm apna data excute krte hai then catch se 
+
+Q14 callback functions
+
+ans callback function refrance leta hai other functions ka
+Q15 map filter and foreach 
+
+map -> map ek array ka methods hai jo hme help krta hau arry ki sari value ko use krne main jise arry orignal  value ko change na kre or map return a new array
+
+filter -> filter hme conditon check kr ke data provide krta hai
+
+foreach => is a loop jo hme arry ki sari value de deta hai pr wo return kuch nhi ktta 
+
+Q16 SetTimeout and SetInterval
+
+SetTimeout => hme sirf ek baat value deta hai 
+
+SetInterval => hme value baar deta hai apni timing ki hisb se jo hme set ki hai 
+
+Q17 LocalStorage
+
+LocalStorage ki value browser main stroe ho jati hai wo tb tk delete nhi joti jb tk hm use particulary ja kr delete na kre
+
+Q18 explain aysc await 
+ans
+
+Q19 hiher Order function
+ans accepts one or more functions as a arguments
+
+
